@@ -1,0 +1,82 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #080000;
+  width: 100%;
+}
+
+.theme {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5px;
+  margin-right: 10px;
+  font-size: 2em;
+  text-transform: capitalize;
+  color: white;
+}
+
+.checkbox {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkbox:checked + .label .ball {
+  -webkit-transform: translateX(26px);
+          transform: translateX(26px);
+}
+
+.checkbox:checked + .label {
+  background-color: #262645;
+}
+
+.label {
+  height: 25px;
+  width: 55px;
+  background-color: #7a7af7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  border-radius: 50px;
+  position: relative;
+  padding: 5px;
+}
+
+.ball {
+  background-color: #FFD700;
+  width: 20px;
+  height: 20px;
+  left: 4px;
+  position: absolute;
+  border-radius: 50%;
+  -webkit-transition: ease-in 0.3s;
+  transition: ease-in 0.3s;
+}
+/*# sourceMappingURL=header.css.map */

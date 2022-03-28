@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="header.css">
+    <title>Welcome</title>
+</head>
+<body>
+    <div class="header"> 
+        <div class="logo"> <img src="images/logo.svg" alt="logo"></div>
+        <div class="theme"><span>Theme</span>
+            <input type="checkbox" class="checkbox" id="checkbox">
+            <label for="checkbox" class="label">
+                <img src="images/moon-fill.svg" alt="moon" width="16px" height="16px" style="filter: invert(49%) sepia(6%) saturate(426%) hue-rotate(202deg) brightness(94%) contrast(85%);">
+                <img src="images/sun-fill.svg" alt="sun" width="16px" height="16px" style="filter: invert(97%) sepia(54%) saturate(1417%) hue-rotate(350deg) brightness(107%) contrast(107%);">
+                <div class="ball"></div>
+            </label>
+        </div>
+    </div>
+    <!-- <div class="header">
+        <iframe src="header.html" frameborder="0" width="100%" height="100%"></iframe>
+    </div> -->
+    <div class="greeting">
+        <div class="msg"><div><h2>Hi, my name is</h2><h1><span>Shamook Saad</span></h1><h2>I'am Front-End Web Developer!!!</h2></div>
+            <button class="button" onclick="document.location='home.html'">Let's check my profile</button>            
+        </div>
+        <div class="myPic"> <img src="images/bg.jpg" alt="myPic"></div>
+    </div>
+</body>
+<script>
+    const checkbox = document.getElementById('checkbox');
+    checkbox.addEventListener('change',() =>
+    {
+        document.body.classList.toggle('dark');
+    });
+</script>
+</html>
