@@ -13,9 +13,8 @@ body {
 }
 
 .dark {
-  background: #141414;
+  background-color: #141414;
   color: white;
-  height: 100vh;
   -webkit-transition: color .3s ease;
   transition: color .3s ease;
 }
@@ -25,7 +24,7 @@ body {
   position: sticky;
   top: 5px;
   width: 100%;
-  background: #474646;
+  background-color: #474646;
 }
 
 .navBar .maxWidth {
@@ -104,7 +103,7 @@ body {
 .roundDp img {
   border: 1px solid #F46F05;
   width: 300px;
-  height: 300PX;
+  height: 300px;
   border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -147,19 +146,19 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   min-height: 400px;
 }
 
 .card {
-  max-height: 365px;
+  max-height: 390px;
   max-width: 355px;
   -webkit-box-flex: 1;
       -ms-flex: 1 0 300px;
@@ -205,10 +204,10 @@ body {
 }
 
 .para .btnRead {
-  color: whitesmoke;
   border-radius: 20px;
   border: 2px solid #F3CD05;
   background-color: #F46F05;
+  color: whitesmoke;
   cursor: pointer;
   padding: 9px 22px;
   font-weight: bold;
@@ -227,16 +226,16 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .contactMe p {
@@ -247,12 +246,12 @@ body {
 }
 
 .contactMe .btnHire {
-  color: whitesmoke;
   border-radius: 20px;
   max-width: 30%;
   min-width: 20%;
   border: 2px solid #F3CD05;
   background-color: #F46F05;
+  color: whitesmoke;
   cursor: pointer;
   padding: 9px 22px;
   font-weight: bold;
@@ -283,12 +282,12 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   background-color: #F46F05;
+  color: white;
   border-radius: 50%;
   font-size: 20px;
   text-decoration: none;
   text-align: center;
   margin: 22px 10px;
-  color: white;
 }
 
 .contactMe .social a:hover {
@@ -326,10 +325,10 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin: 40px;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    margin: 40px;
   }
   .menu li a {
     color: whitesmoke !important;
@@ -346,7 +345,7 @@ body {
   }
   .roundDp img {
     width: 220px;
-    height: 220PX;
+    height: 220px;
   }
   .aboutUs h2 {
     font-size: 40px;
@@ -425,7 +424,7 @@ body {
     height: 200px;
   }
   .contactMe p {
-    font-size: 15px;
+    font-size: 13px;
     font-weight: bold;
     margin-bottom: 15px;
     color: #F3CD05;
@@ -472,7 +471,7 @@ body {
     height: 200px;
   }
   .contactMe p {
-    font-size: 13px;
+    font-size: 10px;
     font-weight: bold;
     margin-bottom: 10px;
     color: #F3CD05;

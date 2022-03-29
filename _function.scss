@@ -1,0 +1,13 @@
+@mixin display($display:null, $align:null, $justify:null) {
+    display: $display;
+    align-items: $align;
+    justify-content: $justify;
+}
+@mixin bg-text-color($bg:null,$color:null) {
+    background-color: $bg;
+    color: $color;
+}
+@mixin width-height($width,$height){
+    width: $width;
+    height: $height;
+}

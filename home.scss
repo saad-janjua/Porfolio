@@ -1,3 +1,4 @@
+@import"./function";
 *{
     box-sizing: border-box;
     margin: 0;
@@ -5,28 +6,20 @@
     text-decoration: none;
 }
 body{
-    background-color: whitesmoke; 
-    color: black;
+    @include bg-text-color(whitesmoke,black );
     font-family: monospace;
 }
 .dark{
-    background: rgb(20, 20, 20);
-    color: white;
-    height: 100vh;
+    @include bg-text-color(rgb(20, 20, 20),white);
     transition: color .3s ease;
-    // .menu li a{
-    //     color: whitesmoke !important;
-    // }
 }
 .navBar{
     position: sticky;
     top: 5px;
     width: 100%;
-    background: #474646;
+    @include bg-text-color(#474646, null);
     .maxWidth{
-        display: flex;
-        align-items: center;
-        justify-content:flex-end;
+        @include display(flex,center,flex-end);
         max-width: 1300px;
         padding: 10px; 
         margin: auto;
@@ -35,7 +28,6 @@ body{
             cursor: pointer;
             margin-left: 25px;
             display: none;
-            
         }
         .checkbtn2{
             font-size: 30px;
@@ -48,7 +40,7 @@ body{
         }
     }
     .menu li a{
-        color: whitesmoke;
+        @include bg-text-color(null,whitesmoke);
         font-size: 18px;
         font-weight: 500;
         margin-left: 25px;
@@ -66,22 +58,19 @@ body{
         list-style:none;
         display: inline-block;
     }
-
 }
 .home{
-    width: 100%;
+    @include width-height(100%,null);
 }
 .homeSection{
     max-width: 90%;
     margin: 50px auto;
-    display: flex;
-    align-items: center;
+    @include display(flex,center,null);
     gap: 30px;   
 }
 .roundDp img{
     border: 1px solid #F46F05;
-    width: 300px;
-    height: 300PX;
+    @include width-height(300px,300px);
     border-radius: 50%;
     object-fit: cover;
 }
@@ -115,14 +104,12 @@ body{
     margin: 30px auto;
 }
 .box{
-    display: flex;
+    @include display(flex,center,center);
     flex-wrap: wrap; // wrap to the multiple rows
-    align-items: center;
-    justify-content: center;
     min-height: 400px;
 }
 .card{
-    max-height: 365px;
+    max-height: 390px;
     max-width: 355px;
     flex: 1 0 300px; //allow grow and min shirik 300px so flex basis set
     padding: 20px 35px;
@@ -135,8 +122,7 @@ body{
 }
 .card img{
     border: 1px solid #F46F05;
-    width: 80px;
-    height: 80px;
+    @include width-height(80px,80px);
     border-radius: 50px;
     object-fit: cover;
 }
@@ -159,10 +145,9 @@ body{
     color: whitesmoke;
 }
 .para .btnRead{
-    color: whitesmoke;
         border-radius: 20px;
         border: 2px solid #F3CD05;
-        background-color: #F46F05;
+        @include bg-text-color(#F46F05,whitesmoke);
         cursor: pointer;
         padding: 9px 22px;
         font-weight: bold;
@@ -173,12 +158,9 @@ body{
 }
 /*<!----contact-section---->*/
 .contactMe{
-    width: 100%;
-    height: 250px;
-    display: flex;
+    @include width-height(100%,250px);
+    @include display(flex,center,center);
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     p{
         font-size: 30px;
         font-weight: bold;
@@ -186,37 +168,32 @@ body{
         color: #F3CD05;
     }
     .btnHire{
-        color: whitesmoke;
         border-radius: 20px;
         max-width: 30%;
         min-width: 20%;
         border: 2px solid #F3CD05;
-        background-color: #F46F05;
+        @include  bg-text-color(#F46F05,whitesmoke);
         cursor: pointer;
         padding: 9px 22px;
         font-weight: bold;
         transition: .4s;
         &:hover{
-            background-color: #F3CD05;
+            @include bg-text-color(#F3CD05,null);
         }           
     }
     .social{
-        display: flex;
+        @include display(flex,null,null);
     }
     
     .social a{
-        width: 45px;
-        height: 45px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: #F46F05;
+        @include width-height(45px,45px);
+        @include display(flex,center,center);
+        @include bg-text-color(#F46F05,white);
         border-radius: 50%;
         font-size: 20px;
         text-decoration: none;
         text-align: center;
         margin: 22px 10px;
-        color: white;
         &:hover{
             transform: scale(1.4);
             transition: .3s;
@@ -230,8 +207,7 @@ body{
     }
     .maxWidth ul{
         position: fixed;
-        width: 100%;
-        height: 100vh;
+        @include width-height(100%,100vh);
         left: -100%;
         top: 0px;
         background-color: #1d1d1f;
@@ -244,28 +220,23 @@ body{
         }
     }
     .menu li{
-        display: flex !important;
-        align-items: center;
+        @include display(flex !important,center,center);
         margin: 40px;
-        justify-content: center;
         a{
-            color: whitesmoke !important;
-        }
-            
+            @include bg-text-color(null,whitesmoke !important);
+         }
     }
     #check:checked ~ ul {
         left: 0 !important;  
     } 
 }
-
 @media (max-width: 820px){
     .homeSection{
         margin: 60px auto;
         gap: 10px;
     }
     .roundDp img{
-        width: 220px;
-        height: 220PX;
+        @include width-height(220px,220px);
     }
     .aboutUs h2{
         font-size: 40px;
@@ -287,7 +258,7 @@ body{
     .card h5{
         font-size: 20px;
         margin-bottom: 18px;
-        color: #F3CD05;
+        @include bg-text-color(null,#F3CD05);
     }
     .contactMe{
         height: 200px;
@@ -295,11 +266,10 @@ body{
             font-size: 20px;
             font-weight: bold;
             margin-bottom: 20px;
-            color: #F3CD05;
+            @include bg-text-color(null,#F3CD05);
         }
         .social a{
-            width: 35px;
-            height: 35px;
+            @include width-height(35px,35px);
         }
     }
 }
@@ -311,8 +281,7 @@ body{
     }
     .roundDp img{
         margin-top: 60px;
-        width: 200px !important;
-        height: 200PX !important;
+        @include width-height(200px !important,200PX !important);
     }
     .aboutUs h2{
         font-size: 30px;
@@ -334,19 +303,18 @@ body{
     .card h5{
         font-size: 20px;
         margin-bottom: 18px;
-        color: #F3CD05;
+        @include bg-text-color(null,#F3CD05);
     }
     .contactMe{
         height: 200px;
         p{
-            font-size: 15px;
+            font-size: 13px;
             font-weight: bold;
             margin-bottom: 15px;
-            color: #F3CD05;
+            @include bg-text-color(null,#F3CD05);
         }
         .social a{
-            width: 30px;
-            height: 30px;
+            @include width-height(30px,30px);
         }
     }
 }
@@ -357,8 +325,7 @@ body{
     }
     .roundDp img{
         margin-top: 60px;
-        width: 150px !important;
-        height: 150PX !important;
+        @include width-height(150px !important,150PX !important);
     }
     .aboutUs h2{
         font-size: 25px;
@@ -380,19 +347,18 @@ body{
     .card h5{
         font-size: 15px;
         margin-bottom: 10px;
-        color: #F3CD05;
+        @include bg-text-color(null,#F3CD05);
     }
     .contactMe{
         height: 200px;
         p{
-            font-size: 13px;
+            font-size: 10px;
             font-weight: bold;
             margin-bottom: 10px;
-            color: #F3CD05;
+            @include bg-text-color(null,#F3CD05);
         }
         .social a{
-            width: 30px;
-            height: 30px;
+            @include width-height(30px,30px);
         }
     }
 }
